@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                def mvn_version = 'localMaven'
+                withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
+                //sh "mvn clean package"
+
             }
             post{
                 success{
