@@ -31,7 +31,7 @@ pipeline {
                 }
                 build job: 'deploy-to-prod'
             }
-        }
+        
         post{
             success{
                 echo 'Successfully deployed to prod'
@@ -41,5 +41,6 @@ pipeline {
            }
         }
        }
+    }
 }
   
